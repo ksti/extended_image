@@ -10,15 +10,11 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-<<<<<<< HEAD
   extended_image_library:
     git:
         url: https://github.com/fluttercandies/extended_image_library.git
         ref: dev
 
-=======
-  extended_image_library: ^0.2.3
->>>>>>> 7b15305ab4464831fc48cee77cec17948a05f038
 dev_dependencies:
   flutter_test:
     sdk: flutter
