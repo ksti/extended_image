@@ -1,9 +1,64 @@
+## [0.7.3+1]
+
+* remove docs.
+
+## [0.7.3]
+
+* Improve:
+  fix build error on high flutter sdk(> 1.6.0)
+  fix analysiz_options
+
+## [0.7.2]
+
+* Features:
+  support loading progress for network
+  public HttpClient of ExtendedNetworkImageProvider
+  public ExtendedImageGestureState for SlideOffsetHandler/SlideEndHandler/SlideScaleHandler to get scale of image
+  
+## [0.7.1]
+
+* Improve:
+  scale parameter of method(handleDoubleTap) is support animationMinScale and animationMaxScale now.  
+
+## [0.7.0]
+
+* Features:
+  Support web.
+  Add clearMemoryCacheWhenDispose parameter that whether clear memory cache when image is disposed.
+* Issues:
+  Fix animationMinScale and animationMaxScale are not working for gif.  
+  Fix scale parameter of method(handleDoubleTap) is beyond minScale and maxScale.
+
+## [0.6.9]
+
+* Features:
+  Support customize offset when slide page.
+
+## [0.6.8]
+
+* Issues:
+  Fix breaking change for flutter 1.10.15 about miss load parameter.
+
+## [0.6.7]
+
+* Issues:
+  Fix issue that ExtendedImageGesturePageView didn't work well when set initial alignment.
+
+## [0.6.6]
+
+* Features:
+  Support init image with alignment when initialScale >1.0.
+* Issues:
+  Fix issue that scrollDirection didn't work when set it dynamically(ExtendedImageGesturePageView ).
+* Improve:
+  Add WaterfallFlow demo.
+
 ## [0.6.5]
 
 * Features:
   Add completedWidget for ExtendedImageState, it is include gesture or editor, so that you would't miss them
 * Improve:
-  improve documents about Load State 
+  Improve documents about Load State 
 
 ## [0.6.4]
 
@@ -101,7 +156,7 @@
 
 ## [0.3.6]
 
-* handle loadfailed when re-addListener
+* handle load failed when re-addListener
 
 ## [0.3.4]
 
@@ -143,7 +198,7 @@
 ## [0.2.3]
 
 * add enableMemoryCache parameter, whether cache in PaintingBinding.instance.imageCache
-* add clearMemoryCacheIfFailed parameter, when failed to load image, whether clear memory cache,if ture, image will reload in next time.
+* add clearMemoryCacheIfFailed parameter, when failed to load image, whether clear memory cache,if true, image will reload in next time.
 * auto cancel network request is obsolete.
 
 ## [0.2.2]

@@ -1,10 +1,10 @@
+import 'dart:ui' as ui show Image;
+import 'package:flutter/material.dart';
 import 'package:extended_image/src/editor/extended_image_editor_utils.dart';
 import 'package:extended_image/src/gesture/extended_image_gesture_utils.dart';
 import 'package:extended_image/src/extended_image_typedef.dart';
 import 'package:extended_image/src/image/extended_render_image.dart';
 import 'package:flutter/foundation.dart';
-import 'package:flutter/material.dart';
-import 'dart:ui' as ui show Image;
 
 /// A widget that displays a [dart:ui.Image] directly.
 ///
@@ -32,7 +32,7 @@ class ExtendedRawImage extends LeafRenderObjectWidget {
     this.matchTextDirection = false,
     this.invertColors = false,
     this.filterQuality = FilterQuality.low,
-    this.soucreRect,
+    this.sourceRect,
     this.beforePaintImage,
     this.afterPaintImage,
     this.gestureDetails,
@@ -46,7 +46,7 @@ class ExtendedRawImage extends LeafRenderObjectWidget {
   /// details about edit
   final EditActionDetails editActionDetails;
 
-  /// details about gestrue
+  /// details about gesture
   final GestureDetails gestureDetails;
 
   ///you can paint anything if you want before paint image.
@@ -169,7 +169,7 @@ class ExtendedRawImage extends LeafRenderObjectWidget {
 
   ///input Rect, you can use this to crop image.
   ///it work when centerSlice==null
-  final Rect soucreRect;
+  final Rect sourceRect;
 
   @override
   ExtendedRenderImage createRenderObject(BuildContext context) {
@@ -192,7 +192,7 @@ class ExtendedRawImage extends LeafRenderObjectWidget {
             : null,
         invertColors: invertColors,
         filterQuality: filterQuality,
-        soucreRect: soucreRect,
+        sourceRect: sourceRect,
         beforePaintImage: beforePaintImage,
         afterPaintImage: afterPaintImage,
         gestureDetails: gestureDetails,
@@ -221,7 +221,7 @@ class ExtendedRawImage extends LeafRenderObjectWidget {
       ..filterQuality = filterQuality
       ..afterPaintImage = afterPaintImage
       ..beforePaintImage = beforePaintImage
-      ..soucreRect = soucreRect
+      ..sourceRect = sourceRect
       ..gestureDetails = gestureDetails
       ..editActionDetails = editActionDetails;
   }
